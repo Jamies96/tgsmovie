@@ -1,0 +1,854 @@
+/*CSS comuni*/
+
+/*
+    Imposta le proprietà principali del body:
+    - colore di sfondo
+    - colore del testo
+    - font
+*/
+body {
+    background-color: #0E244A;
+    color: #7B8E9D;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    margin: 0;
+}
+
+/*
+    Imposta il font del H1
+*/
+h1 {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 93px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+}
+
+/*
+    Imposta il font del H2
+*/
+h2 {
+
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 58px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+}
+
+/*
+    Imposta il font del H3
+*/
+h3 {
+
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+}
+
+/*
+    Imposta il font dei button
+*/
+.aButton {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #CDDADA;
+    display: inline-block;
+}
+
+/*
+    Imposta il font dei link
+*/
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0;
+    text-align: left;
+
+}
+
+/*Menu*/
+
+/*
+ Impostazioni principali del menu:
+ - posizione fissa
+ - dimensione
+ - colore
+*/
+#menu {
+    z-index: 1;
+    position: fixed;
+    top: 29px;
+    right: 0;
+    width: 70%;
+    height: 70px;
+    color: #CDDADA;
+
+}
+
+/*
+ Impostazioni principali delle voci del menu:
+ - font
+ - colore
+ - allineamento testo
+ - dimensioni
+ - effetto transizione colore sfondo
+
+*/
+#menu a {
+    font-style: normal;
+    font-weight: normal;
+    color: inherit;
+    background-color: inherit;
+    line-height: 70px;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+/*
+ Impostazioni per creare il menu orizzontale
+*/
+#menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+    margin: 0;
+}
+
+/*
+ Impostazioni per creare il menu orizzontale
+*/
+#menu li {
+    padding: 0;
+    flex-grow: 1;
+    height: 100%;
+    background-color: #0E244A;
+}
+
+/*
+ Modifica applicata al colore della voce del menu quando ci si trova sulla pagina corrente
+*/
+#menu ul #actived a {
+    color: #DDA44A;
+    font-weight: bolder;
+}
+
+/*
+    Modifica voce menu al passaggio del mouse
+*/
+#menu ul a:hover {
+    background-color: #CDDADA;
+    color: #0E244A;
+    font-weight: bolder;
+}
+
+/*Logo*/
+#logo {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 5%;
+
+}
+
+/*
+   Impostazioni dimensioni, posizione, bordo dell'immagine del logo
+*/
+#logo img {
+    height: 128px;
+    width: 128px;
+    left: 77px;
+    top: 16px;
+    border-radius: 100%;
+    border: 1px solid #6C6767;
+    box-sizing: border-box;
+    transition: transform .8s ease-in-out;
+}
+
+
+/*
+   Effetto di rotazione di 180gradi al passaggio del mouse
+*/
+
+#logo img:hover {
+    transform: rotateY(180deg);
+
+}
+
+/*Footer*/
+
+/*
+    Imposta il colore del testo nel footer
+*/
+#footer {
+    color: #CDDADA;
+}
+
+/*
+    Imposta la posizione della hr nel footer
+*/
+
+.sep {
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+
+/*
+    Imposta la posizione del testo copyright nel footer
+*/
+#copy {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    text-align: center;
+}
+
+/*
+    Imposta il grassetto al testo presente nel paragrafo del footer
+*/
+#copy p {
+    font-weight: bold;
+}
+
+/*
+    Imposta la posizione delle icone all'interno della griglia
+*/
+
+#icons {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    text-align: right;
+}
+
+/*
+    Imposta il padding destro delle icone
+*/
+#icons img {
+    padding-right: 10px;
+}
+
+/*
+    Cambia l'immagine dell'icona al passaggio del mouse
+*/
+#imdb-logo:hover {
+    content: url("images/icon-imdb-hover.png");
+}
+
+/*
+    Cambia l'immagine dell'icona al passaggio del mouse
+*/
+
+#fb-logo:hover {
+    content: url("images/icon-fb-hover.png");
+}
+
+/*
+    Cambia l'immagine dell'icona al passaggio del mouse
+*/
+
+#insta-logo:hover {
+    content: url("images/icon-insta-hover.png");
+}
+
+/*
+    Cambia l'immagine dell'icona al passaggio del mouse
+*/
+
+#twit-logo:hover {
+    content: url("images/icon-twit-hover.png");
+}
+
+/*
+    Imposta il colore dei link presenti nel footer a sinistra
+*/
+.link-footer {
+    color: #CDDADA;
+}
+
+
+/*
+    Cambia il colore dei link presenti nel footer a sinistra al passaggio del mouse
+*/
+#footer a:hover {
+    color: #DDA44A;
+}
+
+/*
+//attivare per vedere griglia nel footer
+#footer div {
+    border: 1px solid red;
+} */
+
+/*Body grid*/
+
+/*
+   Griglia a 12 colonne comune in tutte le pagine
+*/
+.body-grid {
+    position: relative;
+    top: 128px;
+    left: 0;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+/*
+    Posizione del titolo principale di ogni pagina
+*/
+.title-page {
+    grid-column-start: 2;
+    grid-column-end: 12;
+}
+
+/*
+ Allineamento al centro e colore di ogni h1
+*/
+
+.title-page h1 {
+    text-align: center;
+    color: #DDA44A;
+}
+
+
+/*Home*/
+
+/*
+    Imposta l'immagine di sfondo, dimensioni, senza ripetizione e permette
+    di avvicinare i bottoni al titolo della pagina con la proprietà grid-auto-rows
+*/
+#home {
+    background-image: url("images/bg-homepage.png");
+    height: 1084px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    grid-auto-rows: min-content;
+}
+
+/*
+//Attivare per vedere la griglia nella home
+#home div {
+    /*border: 1px solid red;
+}
+*/
+
+/*
+    Centra il testo presente nella home e cambia il colore
+*/
+.title-page p {
+    text-align: center;
+    color: #CDDADA;
+}
+
+
+/*
+ Le seguenti regole impostano la posizione, il colore, la rotondità, l'allineamento,
+ il padding dei due bottoni presenti nella home
+*/
+#home-button-left {
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+}
+
+#home-button-right {
+    grid-column-start: 9;
+    grid-column-end: 12;
+}
+
+#home .aButton {
+    background-color: #D7264D;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    padding: 7px 33px;
+    top: 0;
+    border: 1px solid #D7264D;
+}
+
+/*
+ Le seguenti regole impostano la posizione, il colore, la rotondità, l'allineamento,
+ il padding dei due bottoni presenti nella home al passaggio del mouse
+*/
+
+#home .aButton:hover {
+    background-color: #DDA44A;
+    color: #D7264D;
+    font-weight: bold;
+}
+
+/*Il film*/
+
+
+/*#film div {
+    border: 1px solid red;
+}*/
+
+
+/*
+    Menu laterale fisso interno alla sezione film
+ */
+#menu-secondary {
+    z-index: 1;
+    color: #D7264D;
+    background-color: transparent;
+    position: fixed;
+    top: 150px;
+    left: 50px;
+    text-decoration: none;
+
+}
+
+/*
+ Impostazione dei link presenti all'interno del menu laterale/secondario
+ */
+#menu-secondary a {
+    font-style: normal;
+    font-weight: normal;
+    color: inherit;
+    background-color: inherit;
+    line-height: 70px;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+
+}
+
+/*
+    Elimina i bullet della lista
+*/
+#menu-secondary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/*
+    Imposta il grassetto ai link presenti nel menu secondario al passaggio del mouse
+*/
+#menu-secondary ul li:hover a {
+    font-weight: bold;
+}
+
+
+/*
+        Imposta lo spazio in cui sono fornite le informazioni essenziali del film
+*/
+.film-content {
+    grid-column-start: 3;
+    grid-column-end: 11;
+}
+
+/*
+   Imposta le dimensioni del video e toglie il bordo
+*/
+#trailer iframe {
+    border: 0;
+    height: 450px;
+    width: 100%;
+}
+
+/*
+    Imposta le informazioni essenziale in una lista senza bullet
+*/
+#movie-info ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+/*
+ Imposta la posizione delle immagini usate per separare i contenuti della sezione Film
+*/
+.img-sep {
+    grid-column-start: 3;
+    grid-column-end: 13;
+}
+
+/*
+ Imposta le dimensioni delle immagini usate per separare i contenuti della sezione Film
+*/
+.img-sep img {
+    width: 100%;
+    height: 350px;
+}
+
+
+/*
+    Allinea al centro e imposta il colore agli h2 presenti all'interno della classe film-content
+*/
+.film-content h2 {
+    text-align: center;
+    color: #CDDADA;
+}
+
+/*
+    Imposta il colore dei link presenti nella parte dedicata alla critica
+*/
+#critics a {
+    color: #7B8E9D;
+}
+
+
+/*
+    Imposta il colore dei link presenti nella parte dedicata alla critica al passaggio del mouse
+*/
+#critics a:hover {
+    color: #CDDADA;
+}
+
+/*
+    Imposta la posizione delle card (testo+immagini) dei personaggi all'interno della griglia
+*/
+.character-img-left {
+    grid-column-start: 3;
+    grid-column-end: 7;
+}
+
+.character-description-left {
+    grid-column-start: 7;
+    grid-column-end: 12;
+}
+
+.character-img-right {
+    grid-column-start: 8;
+    grid-column-end: 12;
+}
+
+.character-description-right {
+    grid-column-start: 3;
+    grid-column-end: 8;
+}
+
+.character-img-right img, .character-img-left img {
+    width: 100%;
+
+}
+
+/*
+    Imposta la posizione della descrizione del regista all'interno della griglia
+*/
+#director {
+    grid-column-start: 3;
+    grid-column-end: 9;
+}
+
+/*
+    Imposta la posizione della descrizione del regista all'interno della griglia
+*/
+
+#director-photo {
+    grid-column-start: 9;
+    grid-column-end: 12;
+
+}
+
+/*
+    Imposta la dimensione dell'immagine del regista all'interno della griglia
+*/
+
+
+#director-photo img {
+    width: 100%;
+
+}
+
+
+/*
+    Imposta la dimensione dell'immagine dei loghi presenti nella parte dedicata
+     ai maggiori siti di cinema all'interno della griglia
+*/
+
+.cine-logo img {
+    width: 100%;
+}
+
+
+/*Curiosity*/
+/*#curiosity div {
+    border: 1px solid red;
+}*/
+
+/*
+    Imposta la posizione del testo all'interno della griglia
+*/
+#awards {
+    grid-column-start: 4;
+    grid-column-end: 10;
+
+}
+
+/*
+    Allinea e colore gli h2 all'interno della griglia
+*/
+
+#awards h2 {
+    text-align: center;
+    color: #CDDADA;
+}
+
+
+/*
+    Imposta la posizione e l'allineamento del testo all'interno della griglia
+*/
+
+#curiosity-description {
+    grid-column-start: 3;
+    grid-column-end: 9;
+
+}
+
+#curiosity-description p {
+    text-align: right;
+}
+
+/*
+     Imposta la posizione e la dimensione dell'immagine con i due attori
+     all'interno della griglia
+*/
+#award-actors {
+    grid-column-start: 9;
+    grid-column-end: 12;
+
+}
+
+#award-actors img {
+    width: 100%;
+}
+
+/*
+    Imposta la posizione, l'allineamento e il colore del titolo h2 riguardante
+    la colonna sonora
+*/
+#title-soundtrack {
+    grid-column-start: 3;
+    grid-column-end: 12;
+
+}
+
+#title-soundtrack h2 {
+    text-align: left;
+    color: #CDDADA;
+}
+
+#about-soundtrack {
+    grid-column-start: 3;
+    grid-column-end: 12;
+}
+
+/*
+     Imposta la posizione e la dimensione dell'immagine dell'album della colonna sonora
+*/
+#cover-soundtrack {
+    grid-column-start: 3;
+    grid-column-end: 7;
+}
+
+#cover-soundtrack img {
+    width: 100%;
+    height: 100%;
+}
+
+/*
+    Imposta la posizione dell'elenco delle canzoni
+*/
+.songs {
+    grid-column-start: 7;
+    grid-column-end: 12;
+}
+
+/*
+    Elimina il bullet dell'elenco delle canzoni
+*/
+.songs ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+/*
+    Imposta la posizione, l'allineamento e il colore dei titoli h2 e h3 dei video presenti
+    nella pagina
+*/
+#this-is-me, #the-g-show, #stars {
+    grid-column-start: 4;
+    grid-column-end: 10;
+}
+
+#this-is-me h2, #this-is-me h3, #the-g-show h2, #stars h2 {
+    color: #CDDADA;
+    text-align: center;
+}
+
+/*
+    Imposta la posizione e la dimensione del contenitore dei video presenti nella pagina
+*/
+
+.video-songs {
+    grid-column-start: 4;
+    grid-column-end: 10;
+}
+
+.video-songs iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+/*
+    Imposta il colore del grassetto
+*/
+
+#curiosity b {
+    color: #CDDADA;
+}
+
+/*
+    Imposta il colore dei link presenti nell'elenco delle canzoni e toglie l'underline
+*/
+.songs a {
+    text-decoration: none;
+    color: #7B8E9D;
+
+}
+
+/*
+    Imposta il colore dei link presenti nell'elenco delle canzoni al passaggio del mouse
+*/
+
+.songs a:hover {
+    color: #DDA44A;
+
+}
+
+
+/*Gallery*/
+
+/*
+    Imposta le dimensioni delle immagini presenti nella pagina Gallery
+*/
+#gallery img {
+    width: 100%;
+    height: 350px;
+}
+
+/*
+//Attivare per vedere la griglia
+#gallery div {
+    border: 1px solid red;
+
+
+}*/
+
+/*
+    Imposta le posizioni e l'allineamento del testo presente prima della gallery
+    all'interno della griglia
+*/
+
+#gallery-description {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    text-align: center;
+}
+
+/*
+    Imposta le posizioni delle immagini all'interno della griglia:
+    8 immagini suddivise su 4 righe.
+*/
+
+.img-gallery1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+}
+
+.img-gallery2 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+
+
+}
+
+.img-gallery3 {
+    grid-column-start: 9;
+    grid-column-end: 13;
+}
+
+.img-gallery-unique {
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+
+/*
+    Imposta la posizione del testo sotto la gallery all'interno della griglia
+*/
+#galleryplus {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    text-align: center;
+}
+
+/*
+    Imposta il colore del link presente sotto la gallery
+*/
+#galleryplus a {
+    color: #CDDADA;
+
+}
+
+/*
+    Imposta il colore del link presente sotto la gallery al passaggio del mouse
+*/
+#galleryplus a:hover {
+    color: #DDA44A;
+}
+
+/*
+    Imposta lo zoom delle immagini della gallery al passaggio del mouse
+*/
+
+#gallery img:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
